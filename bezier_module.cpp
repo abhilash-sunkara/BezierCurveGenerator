@@ -60,6 +60,8 @@ pybind11::array_t<double> get_bezier_curve(pybind11::array_t<double> input_array
     return result;
 }
 
+//Entry point for python import
+//creates the functions that can be called in python
 PYBIND11_MODULE(bezier_math, m) {
     m.def("get_bezier_curve", &get_bezier_curve, "Prints out bezier path");
 }
